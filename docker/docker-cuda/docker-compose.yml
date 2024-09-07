@@ -11,10 +11,10 @@ services:
         PIP_INDEX: https://pypi.org/simple
     container_name: llamafactory
     volumes:
-      - ../../hf_cache:/root/.cache/huggingface
-      - ../../ms_cache:/root/.cache/modelscope
-      - ../../data:/app/data
-      - ../../output:/app/output
+      - /home/aiqos/Documents/Docker/llamafactory/hf_cache:/root/.cache/huggingface  # Local path for Hugging Face cache
+      - /home/aiqos/Documents/Docker/llamafactory/ms_cache:/root/.cache/modelscope  # Local path for Modelscope cache
+      - /home/aiqos/Documents/Docker/llamafactory/data:/app/data  # Local path for data folder
+      - /home/aiqos/Documents/Docker/llamafactory/output:/app/output  # Local path for output folder
     ports:
       - "7860:7860"
       - "8000:8000"
@@ -30,3 +30,6 @@ services:
             count: "all"
             capabilities: [gpu]
     restart: unless-stopped
+networks:
+  llm-network:
+    external: true  # Attach to the existing llm-network    
