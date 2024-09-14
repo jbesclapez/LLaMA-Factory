@@ -30,6 +30,3 @@ services:
             count: "all"
             capabilities: [gpu]
     restart: unless-stopped
-networks:
-  llm-network:
-    external: true  # Attach to the existing llm-network    
