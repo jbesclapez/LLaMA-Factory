@@ -16,8 +16,8 @@ services:
       - /home/aiqos/Documents/Docker/llamafactory/data:/app/data  # Local path for data folder
       - /home/aiqos/Documents/Docker/llamafactory/output:/app/output  # Local path for output folder
     ports:
-      - "43014:7860"
-      - "43015:8000"
+      - "7860:7860"
+      - "8000:8000"
     ipc: host
     tty: true
     stdin_open: true
