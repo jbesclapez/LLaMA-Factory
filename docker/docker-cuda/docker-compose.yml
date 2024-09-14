@@ -18,6 +18,10 @@ services:
     ports:
       - "7860:7860"
       - "8000:8000"
+    ipc: host
+    tty: true
+    stdin_open: true
+    command: ["llamafactory-cli", "webui"]
     deploy:
       resources:
         reservations:
