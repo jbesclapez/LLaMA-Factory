@@ -11,7 +11,7 @@ services:
         PIP_INDEX: https://pypi.org/simple
     container_name: llamafactory
     environment:
-      - HUGGINGFACE_TOKEN=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
+      HUGGINGFACE_TOKEN: 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  # Note the syntax change
     volumes:
       - /home/aiqos/Documents/Docker/llamafactory/hf_cache:/root/.cache/huggingface  # Local path for Hugging Face cache
       - /home/aiqos/Documents/Docker/llamafactory/ms_cache:/root/.cache/modelscope  # Local path for Modelscope cache
