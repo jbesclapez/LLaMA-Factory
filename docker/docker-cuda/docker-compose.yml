@@ -18,6 +18,7 @@ services:
       - /home/aiqos/Documents/Docker/llamafactory/data:/app/data  # Local path for data folder
       - /home/aiqos/Documents/Docker/llamafactory/output:/app/output  # Local path for output folder
       - /home/aiqos/Documents/Docker/llamafactory/saves:/app/saves  # Mapping the saves directory
+      - /home/aiqos/Documents/Docker/llamafactory/OS:/app/OS
     ports:
       - "7860:7860"
       - "8000:8000"
