@@ -13,13 +13,12 @@ services:
     environment:
       - HUGGINGFACE_TOKEN=${HUGGINGFACE_TOKEN}  # Do not forget to add the token in your environemetn variable
     volumes:
-      - /home/aiqos/Documents/Docker/llamafactory/hf_cache:/root/.cache/huggingface  # Local path for Hugging Face cache
-      - /home/aiqos/Documents/Docker/llamafactory/ms_cache:/root/.cache/modelscope  # Local path for Modelscope cache
-      - /home/aiqos/Documents/Docker/llamafactory/data:/app/data  # Local path for data folder
-      - /home/aiqos/Documents/Docker/llamafactory/output:/app/output  # Local path for output folder
-      - /home/aiqos/Documents/Docker/llamafactory/saves:/app/saves  # Mapping the saves directory
-      # - /home/aiqos/Documents/Docker/llamafactory/OS:/app/OS
-      - /home/aiqos/Documents/Docker/llamafactory/exports:/app/exports  # Local path for exports folder
+      - /home/aiqos/Documents/Docker/llamafactory/hf_cache:/root/.cache/huggingface
+      - /home/aiqos/Documents/Docker/llamafactory/ms_cache:/root/.cache/modelscope
+      - /home/aiqos/Documents/Docker/llamafactory/data:/app/data
+      - /home/aiqos/Documents/Docker/llamafactory/output:/app/output
+      - /home/aiqos/Documents/Docker/llamafactory/saves:/app/saves
+      - /home/aiqos/Documents/Docker/llamafactory/exports:/app/exports
     ports:
       - "7860:7860"
       - "8000:8000"
